@@ -3519,9 +3519,10 @@ body .site-header .shop-dropdown-product--soon small { color: var(--brand-crumb-
 
 @media (min-width: 761px) {
   .home-page .hero-launch-copy {
+    left: 0;
     align-items: flex-start;
     width: min(46%, 640px);
-    padding: clamp(36px, 5vw, 72px) 0 clamp(36px, 5vw, 72px) clamp(48px, 6vw, 100px);
+    padding: clamp(36px, 5vw, 72px) 0 clamp(36px, 5vw, 72px) clamp(56px, 6vw, 108px);
     text-align: left;
   }
   .home-page .hero-launch h1 {
@@ -3537,6 +3538,10 @@ body .site-header .shop-dropdown-product--soon small { color: var(--brand-crumb-
 }
 
 .hero-launch-pack-birthday { cursor: default; }
+@media (max-width: 760px) {
+  .home-page .hero-launch-pack-birthday { left: 1%; }
+  .home-page .hero-launch-pack-peanut { right: 1%; }
+}
 .where-hero-products .where-pack { display: block; }
 .where-hero-products .where-pack img {
   display: block;
