@@ -4156,3 +4156,75 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
   .home-page .hero-launch h1 { text-align: center; }
   .home-page .hero-launch-lockup { justify-content: center; }
 }
+
+/* Soft arc and a few floating brittle pieces behind the hero pouches. */
+.home-page .hero-atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.home-page .hero-blob {
+  position: absolute;
+  z-index: 0;
+  width: 128%;
+  aspect-ratio: 1;
+  right: -34%;
+  top: 46%;
+  border: 100px solid rgba(79, 44, 29, 0.11);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  filter: blur(22px);
+}
+.home-page .hero-float {
+  position: absolute;
+  z-index: 0;
+  width: var(--w);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 12px rgba(79, 44, 29, 0.16));
+  transform: rotate(var(--rot));
+  animation: hero-drift var(--dur, 8.5s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+.home-page .hero-float-front { z-index: 4; }
+.home-page .hero-float-a { --w: 150px; --rot: -14deg; --dur: 9s; left: 4%; top: 14%; }
+.home-page .hero-float-b { --w: 108px; --rot: 11deg; --dur: 7.5s; --delay: -2s; left: 34%; top: 4%; filter: blur(0.6px) drop-shadow(0 8px 10px rgba(79, 44, 29, 0.12)); }
+.home-page .hero-float-c { --w: 96px; --rot: -8deg; --dur: 10s; --delay: -4s; right: 6%; top: 16%; }
+.home-page .hero-float-d { --w: 78px; --rot: 18deg; --dur: 8s; --delay: -1s; left: 0; bottom: 16%; filter: blur(1.4px) drop-shadow(0 6px 8px rgba(79, 44, 29, 0.1)); }
+.home-page .hero-float-e { --w: 30px; --rot: -8deg; --dur: 6.5s; --delay: -3s; right: 14%; top: 36%; z-index: 4; }
+.home-page .hero-float-f { --w: 24px; --rot: 16deg; --dur: 11s; --delay: -5s; left: 22%; bottom: 22%; filter: blur(0.8px); }
+.home-page .hero-crumb {
+  position: absolute;
+  z-index: 4;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #EF3E2D;
+  pointer-events: none;
+}
+.home-page .hero-crumb-a { left: 18%; top: 28%; width: 6px; height: 6px; }
+.home-page .hero-crumb-b { right: 10%; top: 42%; width: 5px; height: 5px; opacity: 0.85; }
+.home-page .hero-crumb-c { left: 46%; top: 18%; width: 8px; height: 5px; border-radius: 40%; transform: rotate(-20deg); }
+.home-page .hero-crumb-d { right: 22%; bottom: 18%; width: 5px; height: 5px; opacity: 0.7; }
+@keyframes hero-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--rot)); }
+  50% { transform: translate3d(0, -8px, 0) rotate(calc(var(--rot) + 3deg)); }
+}
+@media (max-width: 760px) {
+  .home-page .hero-blob {
+    width: 168%;
+    right: -36%;
+    top: 58%;
+    border-width: 54px;
+  }
+  .home-page .hero-float-extra,
+  .home-page .hero-crumb-extra { display: none; }
+  .home-page .hero-float-a { --w: 72px; left: 2%; top: 6%; }
+  .home-page .hero-float-b { --w: 58px; left: auto; right: 1%; top: 2%; }
+  .home-page .hero-float-e { --w: 18px; right: 18%; top: 18%; }
+  .home-page .hero-crumb-a { left: 10%; top: 22%; }
+  .home-page .hero-crumb-b { right: 8%; top: 30%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page .hero-float { animation: none; }
+}
