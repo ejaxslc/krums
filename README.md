@@ -1,6 +1,6 @@
-# krums Storefront
+# Krums Storefront
 
-A responsive, interaction-rich storefront concept for krums, built around the brand line “all snacks leave krums,” the official mouse mascot, and the flavor palette supplied in the brand board.
+A responsive storefront for Krums cookie brittle, built around the line “All snacks leave krums.” and the final warm-cream, cookie-brown, and crumb-red brand.
 
 ## Run locally
 
@@ -12,22 +12,16 @@ python -m http.server 4173
 
 Then visit `http://localhost:4173`.
 
-## Commerce integration
+## Pages
 
-Product data lives in `script.js`. The `commerce.checkout()` adapter is the intended integration point for Shopify Storefront API, Shopify Buy Button, Stripe Checkout, or another hosted checkout provider. The cart UI is already provider-agnostic and persists in `localStorage`.
+- `index.html` — home
+- `shop.html` — shop
+- `product.html` — flavor detail (`?flavor=chocolate-chip` or `?flavor=peanut-butter-chocolate`)
+- `where-to-buy.html` — where to buy
+- `contact.html` — contact
 
-## Included interactions
+## Commerce
 
-- Animated three-flavor product switching with matching packaging
-- Scroll reveals, pointer parallax, product tilt, and reduced-motion support
-- Quantity controls, quick-add products, persistent cart, and free-shipping progress
-- Story modal, expandable product details, benefit accordion, FAQ, and review carousel
-- Responsive mobile navigation and layouts
+Product data lives in `script.js`. The `commerce.checkout()` adapter is the integration point for a hosted checkout provider. The cart UI persists in `localStorage`.
 
-## Product artwork
-
-The active pouch and lifestyle assets use the supplied flavor direction: the Original flavor’s tan-and-brown palette for Chocolate Chip and the main brand theme, lavender-pink for Birthday Cake, and warm orange for Cinnamon Roll. The website mascot is a transparent production cutout derived from the supplied `Krums.png` artwork.
-
-The sampled brand-board colors are dark brown `#1f110e`, gold `#a17b4e`, pink `#b7747d`, sage `#6e764f`, and orange `#a14d2b`. Final packaging concepts should still be replaced with print-ready production artwork before launch.
-
-Before launch, replace concept pricing, nutrition claims, product copy, email handling, legal links, and social/contact destinations with verified production content.
+Flavors on sale are Chocolate Chip and Peanut Butter Chocolate Chip. A third flavor slot is shown as coming soon.

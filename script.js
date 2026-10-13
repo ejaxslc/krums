@@ -1,45 +1,35 @@
 const products = [
   {
-    id:"chocolate-chip", name:"Chocolate Chip", category:"Cookie Dough Chips", size:"4 oz pouch", price:7.99,
-    image:"assets/pouch-krums-chocolate-chip.png", kicker:"THE OG CRUNCH", bg:"#d9bc91",
-    description:"Buttery cookie dough crunch studded with rich chocolate chips. Classic comfort, wildly crispy.",
-    notes:["Buttery","Chocolatey","Nostalgic"],
+    id:"chocolate-chip", name:"Chocolate Chip", category:"Cookie brittle", size:"1 pouch", price:7.99,
+    image:"assets/chocolate-chip-v2-front-600.png", kicker:"Cookie brittle", bg:"#FFF4D6",
+    description:"Classic chocolate chip cookie flavor in a thinner, crispier brittle. Familiar taste, with enough crunch to leave a trail.",
+    notes:["Buttery","Chocolatey","Crisp"],
     gallery:[
-      {src:"assets/pouch-krums-chocolate-chip.png",alt:"Chocolate Chip Krums pouch",fit:"contain"},
-      {src:"assets/moment-krums-desk.png",alt:"Chocolate Chip Krums beside coffee on a sunlit desk",fit:"cover"}
+      {src:"assets/chocolate-chip-v2-front-1600.png",alt:"Chocolate Chip Krums cookie brittle pouch, front",fit:"contain"},
+      {src:"assets/chocolate-chip-v2-back-1600.png",alt:"Chocolate Chip Krums cookie brittle pouch, back",fit:"contain"}
     ],
-    overview:"Chocolate Chip turns nostalgic cookie-dough flavor into thin, crispy pieces with rich chocolatey bites in every handful.",
-    useCases:"Keep a pouch in a desk drawer, bring it on a road trip, or open it whenever a familiar chocolate-chip craving needs more crunch.",
-    usage:"Open the pouch and snack straight from the bag. It also works as a crunchy topping for yogurt, ice cream, or an afternoon coffee break.",
-    flavorDetail:"Classic chocolate-chip cookie-dough flavor with a buttery finish and a light, crispy snap."
+    overview:"Chocolate Chip is cookie brittle with the flavor of a normal chocolate chip cookie and enough crunch to leave a trail.",
+    useCases:"Keep a pouch in a desk drawer, tuck it into a bag, or open it whenever a chocolate chip craving needs more crunch.",
+    usage:"Snack it straight from the pouch, or break it over yogurt, ice cream, or an afternoon coffee.",
+    flavorDetail:"Classic chocolate chip cookie flavor with a thin, crispy snap.",
+    ingredients:"Almond flour, allulose, unsweetened chocolate chips (unsweetened chocolate, cocoa butter, sunflower lecithin), butter, sunflower oil, egg, coconut flour, vanilla extract, baking soda, salt, xanthan gum, monk fruit extract.",
+    allergens:"Contains milk, eggs, almonds, and coconut. Made in a facility that also processes tree nuts, peanuts, milk, eggs, wheat, and soy."
   },
   {
-    id:"birthday-cake", name:"Birthday Cake", category:"Cookie Dough Chips", size:"4 oz pouch", price:7.99,
-    image:"assets/pouch-krums-birthday-cake-palette.png", kicker:"THE PARTY CRUNCH", bg:"#d8b6d3",
-    description:"Vanilla cookie dough, joyful rainbow sprinkles, and enough party energy to make any Tuesday feel special.",
-    notes:["Vanilla","Confetti","Joyful"],
+    id:"peanut-butter-chocolate", name:"Peanut Butter Chocolate Chip", category:"Cookie brittle", size:"1 pouch", price:7.99,
+    image:"assets/pb-chocolate-v2-front-600.png", kicker:"Cookie brittle", bg:"#4F2C1D",
+    description:"Peanut butter and chocolate chip cookie flavor in a thinner, crispier brittle. Rich, familiar, and crunchy enough to leave a trail.",
+    notes:["Peanut","Chocolate","Crisp"],
     gallery:[
-      {src:"assets/pouch-krums-birthday-cake-palette.png",alt:"Birthday Cake Krums pouch",fit:"contain"},
-      {src:"assets/moment-krums-road-trip.png",alt:"Birthday Cake Krums on a sunny road trip",fit:"cover"}
+      {src:"assets/pb-chocolate-v2-front-1600.png",alt:"Peanut Butter Chocolate Chip Krums cookie brittle pouch, front",fit:"contain"},
+      {src:"assets/pb-chocolate-v2-back-1600.png",alt:"Peanut Butter Chocolate Chip Krums cookie brittle pouch, back",fit:"contain"}
     ],
-    overview:"Birthday Cake brings vanilla cookie-dough flavor and colorful sprinkles together in a light, crispy snack made for everyday celebrating.",
-    useCases:"Bring it to movie night, pass it around at a party, or keep a pouch nearby when an ordinary afternoon could use some confetti.",
-    usage:"Open, share, and crunch. Birthday Cake is ready straight from the pouch and makes a playful topping for ice cream or yogurt.",
-    flavorDetail:"Sweet vanilla cookie-dough flavor with colorful sprinkles and a crisp, celebratory finish."
-  },
-  {
-    id:"cinnamon-roll", name:"Cinnamon Roll", category:"Cookie Dough Chips", size:"4 oz pouch", price:7.99,
-    image:"assets/pouch-krums-cinnamon-roll-palette.png", kicker:"THE COZY CRUNCH", bg:"#e9a46c",
-    description:"Warm cinnamon-swirled cookie dough with a sweet glaze finish. Basically a bakery hug with a snap.",
-    notes:["Cinnamon","Glazed","Warm"],
-    gallery:[
-      {src:"assets/pouch-krums-cinnamon-roll-palette.png",alt:"Cinnamon Roll Krums pouch",fit:"contain"},
-      {src:"assets/moment-krums-cozy-palette.png",alt:"Cinnamon Roll Krums during a cozy snack break",fit:"cover"}
-    ],
-    overview:"Cinnamon Roll layers warm cinnamon, cookie-dough flavor, and a sweet glazed finish into a thin snack with a satisfying snap.",
-    useCases:"Pair it with morning coffee, keep it nearby for the afternoon slump, or open a pouch when the bakery craving arrives.",
-    usage:"Enjoy it straight from the pouch, alongside coffee, or crushed over oatmeal, yogurt, or vanilla ice cream.",
-    flavorDetail:"Warm cinnamon-swirled cookie-dough flavor with a sweet glaze-inspired finish."
+    overview:"Peanut Butter Chocolate Chip is cookie brittle with the flavor of a peanut butter chocolate chip cookie and enough crunch to leave a trail.",
+    useCases:"Share a pouch on the go, keep one nearby for the afternoon, or open it when a peanut butter craving shows up.",
+    usage:"Snack it straight from the pouch, or break it over yogurt, ice cream, or a spoon of peanut butter.",
+    flavorDetail:"Peanut butter and chocolate chip cookie flavor with a thin, crispy snap.",
+    ingredients:"Almond flour, unsweetened peanut butter, allulose, unsweetened chocolate chips (unsweetened chocolate, cocoa butter, sunflower lecithin), butter, sunflower oil, egg, coconut flour, vanilla extract, baking soda, salt, xanthan gum, monk fruit extract.",
+    allergens:"Contains peanuts, milk, eggs, almonds, and coconut. Made in a facility that also processes tree nuts, peanuts, milk, eggs, wheat, and soy."
   }
 ];
 
@@ -91,7 +81,9 @@ function renderAnnouncement() {
 function changeAnnouncement(direction = 1) {
   announcementIndex = (announcementIndex + direction + announcements.length) % announcements.length;
   const copy = $("#announcement-copy");
-  copy?.animate([{opacity:0,transform:"translateY(4px)"},{opacity:1,transform:"translateY(0)"}], {duration:280});
+  if (copy && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    copy.animate([{opacity:0,transform:"translateY(4px)"},{opacity:1,transform:"translateY(0)"}], {duration:280});
+  }
   renderAnnouncement();
 }
 
@@ -102,8 +94,8 @@ function mountEmailPopup() {
       <section class="email-popup" role="dialog" aria-modal="true" aria-labelledby="email-popup-title">
         <button class="email-popup-close" type="button" data-close-email-popup aria-label="Close email signup">×</button>
         <div class="email-popup-art" aria-hidden="true">
-          <img class="email-popup-logo" src="assets/krums-packaging-wordmark.png" alt="" />
-          <img class="email-popup-mascot" src="assets/krums-mascot-head.png" alt="" />
+          <img class="email-popup-logo" src="assets/krums-logo.svg" alt="" />
+          <img class="email-popup-mascot" src="assets/mascot-head.svg" alt="" />
           <span>10%<small>off</small></span>
         </div>
         <div class="email-popup-content">
@@ -179,44 +171,54 @@ function renderShop() {
   const grid = $("#shop-grid");
   if (!grid) return;
   grid.innerHTML = products.map(product => `
-    <article class="shop-card" style="--card-bg:${product.bg}">
+    <article class="shop-card" data-flavor="${product.id}" style="--card-bg:${product.bg}">
       <a class="shop-card-link" href="product.html?flavor=${product.id}" aria-label="View ${product.name} product page"></a>
-      <div class="shop-card-image"><img src="${product.image}" alt="${product.name} Krums pouch" loading="lazy" /></div>
+      <div class="shop-card-image"><img src="${product.image}" alt="${product.name} Krums cookie brittle pouch" loading="lazy" /></div>
       <p>${product.category}</p>
       <div class="shop-card-heading"><h3>${product.name}</h3><strong>${money(product.price)}</strong></div>
       <div class="shop-card-actions"><button class="shop-card-add" data-quick-add="${product.id}" aria-label="Add ${product.name} to cart">Add to cart</button></div>
-    </article>`).join("");
+    </article>`).join("") + `
+    <article class="shop-card shop-card-soon" id="coming-soon">
+      <div class="shop-card-image"><img src="assets/mascot-head.svg" alt="" /></div>
+      <p>Cookie brittle</p>
+      <div class="shop-card-heading"><h3>Coming soon</h3></div>
+      <p class="soon-note">A new flavor is on the trail.</p>
+    </article>`;
 }
 
 function productInformation(product) {
   return [
     {
       title:"Nutrition Facts",
-      content:`<div class="nutrition-grid"><div><strong>6g</strong><span>Fiber</span></div><div><strong>4g</strong><span>Net carbs</span></div><div><strong>Low</strong><span>Sugar</span></div><div><strong>4 oz</strong><span>Pouch</span></div></div><p class="info-note">Final serving and nutrition-panel details will be confirmed before launch.</p>`
+      content:`<div class="nutrition-grid"><div><strong>130</strong><span>Calories</span></div><div><strong>3g</strong><span>Sugar</span></div><div><strong>4g</strong><span>Net carbs</span></div><div><strong>50%</strong><span>Less sugar</span></div></div><p class="info-note">4g net carbs = 17g carbs − 1g fiber − 11g allulose.</p><p class="info-note">FDA does not consider allulose a total or added sugar for nutrition labeling.</p><p>Made without artificial flavors, artificial colors, preservatives.</p>`
     },
     {title:"Use Cases",content:`<p>${product.useCases}</p>`},
-    {title:"Key Benefits",content:"<ul><li>6g fiber per serving</li><li>4g net carbs per serving</li><li>Vegan-friendly</li><li>Made with non-GMO ingredients</li></ul>"},
+    {title:"Key Benefits",content:"<ul><li>130 calories per serving</li><li>3g sugar per serving</li><li>50% less sugar</li><li>4g net carbs per serving</li><li>Made without artificial flavors, artificial colors, preservatives</li></ul>"},
     {title:"Details",content:`<dl><div><dt>Category</dt><dd>${product.category}</dd></div><div><dt>Size</dt><dd>${product.size}</dd></div><div><dt>Texture</dt><dd>Thin and crispy</dd></div><div><dt>Flavor</dt><dd>${product.flavorDetail}</dd></div></dl>`},
     {title:"Product Overview",content:`<p>${product.overview}</p>`},
     {title:"How & When to Use",content:`<p>${product.usage}</p>`},
-    {title:"Ingredients",content:"<p>Krums are being finalized with a focus on clean, vegan-friendly ingredients. The complete ingredient list and allergen statement will be published before launch.</p>"}
+    {title:"Ingredients",content:`<p>${product.ingredients}</p><p>${product.allergens}</p><p>Made without artificial flavors, artificial colors, preservatives.</p>`}
   ];
 }
 
-function setGalleryImage(index) {
+function setGalleryImage(index, immediate = false) {
   const product = getProduct(activeFlavor);
   const image = $("#product-main-image");
   if (!product || !image || !product.gallery?.length) return;
   galleryIndex = (index + product.gallery.length) % product.gallery.length;
   const selected = product.gallery[galleryIndex];
   const media = $("#product-main-media");
-  image.classList.add("changing");
-  window.setTimeout(() => {
+  const apply = () => {
     image.src = selected.src;
     image.alt = selected.alt;
     media?.classList.toggle("is-lifestyle", selected.fit === "cover");
     image.classList.remove("changing");
-  }, 140);
+  };
+  if (immediate) apply();
+  else {
+    image.classList.add("changing");
+    window.setTimeout(apply, 140);
+  }
   $$("[data-gallery-index]").forEach(button => {
     const active = Number(button.dataset.galleryIndex) === galleryIndex;
     button.classList.toggle("active", active);
@@ -239,17 +241,17 @@ function renderProductPage() {
   if ($("#detail-kicker")) $("#detail-kicker").textContent = product.kicker;
   if ($("#detail-name")) $("#detail-name").textContent = product.name;
   if ($("#detail-description")) $("#detail-description").textContent = product.description;
-  if ($("#detail-size")) $("#detail-size").textContent = `One ${product.size}`;
+  if ($("#detail-size")) $("#detail-size").textContent = "One pouch";
   if ($("#product-price")) $("#product-price").textContent = money(product.price);
   if ($("#detail-taste-notes")) $("#detail-taste-notes").innerHTML = product.notes.map(note => `<span>${note}</span>`).join("");
-  if ($("#detail-metrics")) $("#detail-metrics").innerHTML = `<div><strong>6g</strong><span>fiber</span></div><div><strong>4g</strong><span>net carbs</span></div><div><strong>100%</strong><span>snackable</span></div>`;
-  if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}"><i style="--dot:${item.bg}"></i>${item.name}</a>`).join("");
-  if ($("#product-thumbnails")) $("#product-thumbnails").innerHTML = product.gallery.map((item, index) => `<button data-gallery-index="${index}" class="${index === 0 ? "active" : ""}" aria-label="Show image ${index + 1}" aria-pressed="${index === 0}"><img src="${item.src}" alt="" /></button>`).join("");
+  if ($("#detail-metrics")) $("#detail-metrics").innerHTML = `<ul class="stat-badges" aria-hidden="true"><li class="stat-badge"><strong>130</strong><span>calories</span></li><li class="stat-badge"><strong>3G</strong><span>sugar</span></li><li class="stat-badge"><strong>50%</strong><span>less sugar</span></li></ul>`;
+  if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="flavor-pill-link ${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}">${item.name}</a>`).join("") + `<span class="flavor-pill-link is-soon">Coming soon</span>`;
+  if ($("#product-thumbnails")) $("#product-thumbnails").innerHTML = product.gallery.map((item, index) => `<button data-gallery-index="${index}" class="${index === 0 ? "active" : ""}" aria-label="${item.alt}" aria-pressed="${index === 0}"><img src="${item.src}" alt="" /></button>`).join("");
   if ($("#product-accordions")) $("#product-accordions").innerHTML = productInformation(product).map(item => `<details><summary>${item.title}<span>+</span></summary><div class="product-info-body"><div>${item.content}</div></div></details>`).join("");
-  if ($("#related-products")) $("#related-products").innerHTML = products.filter(item => item.id !== product.id).map(item => `<article style="--card-bg:${item.bg}"><a href="product.html?flavor=${item.id}"><div><img src="${item.image}" alt="${item.name} Krums pouch" /></div><span>${item.category}</span><h3>${item.name}</h3><strong>${money(item.price)}</strong></a></article>`).join("");
+  if ($("#related-products")) $("#related-products").innerHTML = products.filter(item => item.id !== product.id).map(item => `<article class="related-card" data-flavor="${item.id}" style="--card-bg:${item.bg}"><a href="product.html?flavor=${item.id}"><div><img src="${item.image}" alt="${item.name} Krums cookie brittle pouch" /></div><span>${item.category}</span><h3>${item.name}</h3><strong>${money(item.price)}</strong></a></article>`).join("") + `<article class="related-card related-soon"><div><img src="assets/mascot-head.svg" alt="" /></div><span>Cookie brittle</span><h3>Coming soon</h3><p>A new flavor is on the trail.</p></article>`;
   mainQuantity = 1;
   updateMainQuantity();
-  setGalleryImage(0);
+  setGalleryImage(0, true);
 }
 
 function saveCart() {
@@ -370,7 +372,7 @@ on("#contact-form", "submit", event => {
   const subject = encodeURIComponent(`Krums contact: ${data.get("topic")}`);
   const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\nTopic: ${data.get("topic")}\n\n${data.get("message")}`);
   if ($("#contact-status")) $("#contact-status").textContent = "Your email app should open with the message ready to send.";
-  window.location.href = `mailto:hello@krumssnacks.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:info@eatkrums.com?subject=${subject}&body=${body}`;
 });
 document.addEventListener("keydown", event => { if (event.key === "Escape") { closeLayers(); closeEmailPopup(); } });
 
