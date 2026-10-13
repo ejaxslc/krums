@@ -3929,3 +3929,219 @@ body.product-page .related-soon p { margin: 8px 6px 12px; color: var(--brand-bri
   body.product-page .product-info-body dl { grid-template-columns: 1fr; }
   body.product-page .stat-badge { width: 96px; height: 96px; }
 }
+
+/* Spacing polish: same layout, even rhythm, and a contained mobile hero. */
+.shop-card-heading { align-items: flex-start; }
+.shop-card-heading h3 { line-height: 1.15; }
+.shop-card-heading strong { line-height: 1.2; padding-top: 3px; }
+.where-hero-copy h1 { line-height: 0.94; }
+.contact-intro h1 { line-height: 0.98; }
+body.product-page .product-buy-panel h1 { line-height: 1.05; }
+body.product-page .related-products .shop-heading {
+  max-width: none;
+  margin: 0 0 22px;
+  text-align: left;
+}
+body.product-page .related-products .shop-heading .eyebrow { justify-content: flex-start; }
+body.product-page .related-products .shop-heading h2,
+body.product-page .product-information > h2 { line-height: 1.05; text-align: left; }
+
+@media (min-width: 761px) {
+  .home-page .hero-launch h1 { line-height: 0.92; }
+  .home-page .hero-launch-products { right: 0; width: 61%; }
+  .home-page .hero-launch-pack.hero-launch-pack-peanut {
+    right: 8%;
+    width: min(21vw, 300px);
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-birthday { left: 4%; }
+  .home-page .story-copy { margin: 0; text-align: left; }
+  .home-page .story-copy > p:not(.eyebrow) { margin-left: 0; margin-right: 0; }
+}
+
+@media (max-width: 760px) {
+  .home-page .hero.hero-launch {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 28px 12px 28px;
+  }
+  .home-page .hero-launch-copy {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 4px;
+    text-align: center;
+  }
+  .home-page .hero-launch h1 {
+    font-size: clamp(40px, 11vw, 52px);
+    line-height: 0.98;
+    text-align: center;
+  }
+  .home-page .hero-launch-lockup {
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .home-page .hero-launch-logo {
+    width: clamp(148px, 42vw, 188px);
+    height: auto;
+    margin: 0;
+  }
+  .home-page .hero-launch-logo img { object-position: center center !important; }
+  .home-page .hero-launch-cta {
+    width: min(220px, 86%);
+    min-height: 54px;
+    margin: 22px auto 0;
+  }
+  .home-page .hero-launch-lede {
+    margin: 14px auto 0;
+    max-width: 36ch;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 14px;
+  }
+  .home-page .hero-launch-products {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .home-page .hero-launch-pack {
+    position: relative;
+    bottom: auto;
+    left: auto !important;
+    right: auto !important;
+    height: auto;
+    width: 31%;
+    flex: 0 0 31%;
+    margin: 0;
+    pointer-events: auto;
+  }
+  .home-page .hero-launch-pack img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-birthday {
+    order: 1;
+    z-index: 1;
+    width: 30%;
+    flex-basis: 30%;
+    margin-right: -7%;
+    transform: rotate(-6deg) translateY(10px);
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-chocolate {
+    order: 2;
+    z-index: 3;
+    width: 40%;
+    flex-basis: 40%;
+    transform: none;
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-chocolate:hover { transform: translateY(-4px); }
+  .home-page .hero-launch-pack.hero-launch-pack-peanut {
+    order: 3;
+    z-index: 2;
+    width: 30%;
+    flex-basis: 30%;
+    margin-left: -7%;
+    transform: rotate(6deg) translateY(10px);
+  }
+  .home-page .hero-launch-products .coming-soon-badge {
+    top: 12%;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    padding: 5px 7px;
+  }
+
+  .home-page .why.why-standards,
+  .home-page .flavor-trail.content-trail,
+  .home-page .origin-story,
+  .home-page .faq { padding: 40px 20px; }
+  .home-page .social-proof { padding: 28px 20px; }
+  .home-page .story-copy { margin-inline: auto; text-align: center; }
+  .home-page .story-copy > p:not(.eyebrow) { margin-inline: auto; }
+  .home-page > footer,
+  body > footer { padding-inline: 20px; }
+
+  .shop-page .flavor-shop.shop-catalog { padding: 40px 20px 48px; }
+  .shop-heading h1,
+  .shop-heading h2 { line-height: 1.05; }
+
+  .where-hero {
+    padding: 40px 20px 32px;
+    gap: 4px;
+    overflow: hidden;
+  }
+  .where-hero-copy h1 { line-height: 0.98; }
+  .where-hero-products {
+    height: auto;
+    min-height: 0;
+    width: 100%;
+    margin-top: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .where-hero-products .where-pack {
+    position: relative;
+    bottom: auto;
+    left: auto !important;
+    right: auto !important;
+    height: auto;
+    width: 30%;
+    flex: 0 0 30%;
+    filter: none;
+  }
+  .where-hero-products .where-pack img { height: auto; }
+  .where-hero-products .where-pack-birthday {
+    order: 1;
+    z-index: 1;
+    margin-right: -6%;
+    transform: rotate(-6deg) translateY(8px);
+  }
+  .where-hero-products .where-pack-chocolate {
+    order: 2;
+    z-index: 3;
+    width: 38%;
+    flex-basis: 38%;
+    transform: none;
+  }
+  .where-hero-products .where-pack-peanut {
+    order: 3;
+    z-index: 2;
+    margin-left: -6%;
+    transform: rotate(6deg) translateY(8px);
+  }
+  .buy-options { padding: 48px 20px 56px; }
+  .buy-options-heading h2 { line-height: 1.02; }
+  .where-social { padding: 40px 20px; }
+
+  .contact-page { padding: 40px 20px 48px; }
+  .contact-intro h1 { line-height: 1; }
+  .contact-form-card { padding: 32px 20px 36px; }
+  .contact-form-card h2 { line-height: 1.05; }
+
+  body.product-page .product-detail { padding: 24px 20px 36px; }
+  body.product-page .product-information,
+  body.product-page .related-products {
+    margin: 0 20px 20px;
+    padding: 24px 20px 28px;
+  }
+  body.product-page .product-buy-panel h1 { font-size: clamp(40px, 11vw, 48px); }
+}
