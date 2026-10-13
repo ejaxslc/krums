@@ -3947,7 +3947,12 @@ body.product-page .related-products .shop-heading h2,
 body.product-page .product-information > h2 { line-height: 1.05; text-align: left; }
 
 @media (min-width: 761px) {
-  .home-page .hero-launch h1 { line-height: 0.92; }
+  .home-page .hero-launch-copy {
+    width: max-content;
+    max-width: min(50%, 680px);
+  }
+  .home-page .hero-launch h1 { line-height: 0.92; width: max-content; }
+  .home-page .hero-launch-cta { align-self: center; margin-left: 0; margin-right: 0; }
   .home-page .hero-launch-products { right: 0; width: 61%; }
   .home-page .hero-launch-pack.hero-launch-pack-peanut {
     right: 8%;
