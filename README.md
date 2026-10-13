@@ -24,4 +24,4 @@ Then visit `http://localhost:4173`.
 
 Product data lives in `script.js`. The `commerce.checkout()` adapter is the integration point for a hosted checkout provider. The cart UI persists in `localStorage`.
 
-Flavors on sale are Chocolate Chip and Peanut Butter Chocolate Chip. A third flavor slot is shown as coming soon.
+Flavors on sale are Chocolate Chip and Peanut Butter Chocolate Chip. Birthday Cake is shown as coming soon and is not purchasable. Pouch images are placeholders until final photography.

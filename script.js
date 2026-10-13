@@ -1,12 +1,11 @@
 const products = [
   {
     id:"chocolate-chip", name:"Chocolate Chip", category:"Cookie brittle", size:"1 pouch", price:7.99,
-    image:"assets/chocolate-chip-v2-front-600.png", kicker:"Cookie brittle", bg:"#FFF4D6",
+    image:"assets/pouch-chocolate-chip.png", kicker:"Cookie brittle", bg:"#FFF4D6",
     description:"Classic chocolate chip cookie flavor in a thinner, crispier brittle. Familiar taste, with enough crunch to leave a trail.",
     notes:["Buttery","Chocolatey","Crisp"],
     gallery:[
-      {src:"assets/chocolate-chip-v2-front-1600.png",alt:"Chocolate Chip Krums cookie brittle pouch, front",fit:"contain"},
-      {src:"assets/chocolate-chip-v2-back-1600.png",alt:"Chocolate Chip Krums cookie brittle pouch, back",fit:"contain"}
+      {src:"assets/pouch-chocolate-chip.png",alt:"Chocolate Chip Krums cookie brittle pouch",fit:"contain"}
     ],
     overview:"Chocolate Chip is cookie brittle with the flavor of a normal chocolate chip cookie and enough crunch to leave a trail.",
     useCases:"Keep a pouch in a desk drawer, tuck it into a bag, or open it whenever a chocolate chip craving needs more crunch.",
@@ -17,12 +16,11 @@ const products = [
   },
   {
     id:"peanut-butter-chocolate", name:"Peanut Butter Chocolate Chip", category:"Cookie brittle", size:"1 pouch", price:7.99,
-    image:"assets/pb-chocolate-v2-front-600.png", kicker:"Cookie brittle", bg:"#4F2C1D",
+    image:"assets/pouch-peanut-butter-chocolate.png", kicker:"Cookie brittle", bg:"#F7DEA2",
     description:"Peanut butter and chocolate chip cookie flavor in a thinner, crispier brittle. Rich, familiar, and crunchy enough to leave a trail.",
     notes:["Peanut","Chocolate","Crisp"],
     gallery:[
-      {src:"assets/pb-chocolate-v2-front-1600.png",alt:"Peanut Butter Chocolate Chip Krums cookie brittle pouch, front",fit:"contain"},
-      {src:"assets/pb-chocolate-v2-back-1600.png",alt:"Peanut Butter Chocolate Chip Krums cookie brittle pouch, back",fit:"contain"}
+      {src:"assets/pouch-peanut-butter-chocolate.png",alt:"Peanut Butter Chocolate Chip Krums cookie brittle pouch",fit:"contain"}
     ],
     overview:"Peanut Butter Chocolate Chip is cookie brittle with the flavor of a peanut butter chocolate chip cookie and enough crunch to leave a trail.",
     useCases:"Share a pouch on the go, keep one nearby for the afternoon, or open it when a peanut butter craving shows up.",
@@ -178,11 +176,10 @@ function renderShop() {
       <div class="shop-card-heading"><h3>${product.name}</h3><strong>${money(product.price)}</strong></div>
       <div class="shop-card-actions"><button class="shop-card-add" data-quick-add="${product.id}" aria-label="Add ${product.name} to cart">Add to cart</button></div>
     </article>`).join("") + `
-    <article class="shop-card shop-card-soon" id="coming-soon">
-      <div class="shop-card-image"><img src="assets/mascot-head.svg" alt="" /></div>
+    <article class="shop-card shop-card-soon" id="coming-soon" style="--card-bg:#BFDEEB">
+      <div class="shop-card-image"><img src="assets/pouch-birthday-cake.png" alt="Birthday Cake Krums cookie brittle pouch" /></div>
       <p>Cookie brittle</p>
-      <div class="shop-card-heading"><h3>Coming soon</h3></div>
-      <p class="soon-note">A new flavor is on the trail.</p>
+      <div class="shop-card-heading"><h3>Birthday Cake</h3><strong>Coming soon</strong></div>
     </article>`;
 }
 
@@ -212,6 +209,7 @@ function setGalleryImage(index, immediate = false) {
     image.src = selected.src;
     image.alt = selected.alt;
     media?.classList.toggle("is-lifestyle", selected.fit === "cover");
+    media?.classList.toggle("is-single", product.gallery.length < 2);
     image.classList.remove("changing");
   };
   if (immediate) apply();
@@ -245,10 +243,10 @@ function renderProductPage() {
   if ($("#product-price")) $("#product-price").textContent = money(product.price);
   if ($("#detail-taste-notes")) $("#detail-taste-notes").innerHTML = product.notes.map(note => `<span>${note}</span>`).join("");
   if ($("#detail-metrics")) $("#detail-metrics").innerHTML = `<ul class="stat-badges" aria-hidden="true"><li class="stat-badge"><strong>130</strong><span>calories</span></li><li class="stat-badge"><strong>3G</strong><span>sugar</span></li><li class="stat-badge"><strong>50%</strong><span>less sugar</span></li></ul>`;
-  if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="flavor-pill-link ${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}">${item.name}</a>`).join("") + `<span class="flavor-pill-link is-soon">Coming soon</span>`;
+  if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="flavor-pill-link ${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}">${item.name}</a>`).join("") + `<span class="flavor-pill-link is-soon">Birthday Cake <small>Soon</small></span>`;
   if ($("#product-thumbnails")) $("#product-thumbnails").innerHTML = product.gallery.map((item, index) => `<button data-gallery-index="${index}" class="${index === 0 ? "active" : ""}" aria-label="${item.alt}" aria-pressed="${index === 0}"><img src="${item.src}" alt="" /></button>`).join("");
   if ($("#product-accordions")) $("#product-accordions").innerHTML = productInformation(product).map(item => `<details><summary>${item.title}<span>+</span></summary><div class="product-info-body"><div>${item.content}</div></div></details>`).join("");
-  if ($("#related-products")) $("#related-products").innerHTML = products.filter(item => item.id !== product.id).map(item => `<article class="related-card" data-flavor="${item.id}" style="--card-bg:${item.bg}"><a href="product.html?flavor=${item.id}"><div><img src="${item.image}" alt="${item.name} Krums cookie brittle pouch" /></div><span>${item.category}</span><h3>${item.name}</h3><strong>${money(item.price)}</strong></a></article>`).join("") + `<article class="related-card related-soon"><div><img src="assets/mascot-head.svg" alt="" /></div><span>Cookie brittle</span><h3>Coming soon</h3><p>A new flavor is on the trail.</p></article>`;
+  if ($("#related-products")) $("#related-products").innerHTML = products.filter(item => item.id !== product.id).map(item => `<article class="related-card" data-flavor="${item.id}" style="--card-bg:${item.bg}"><a href="product.html?flavor=${item.id}"><div><img src="${item.image}" alt="${item.name} Krums cookie brittle pouch" /></div><span>${item.category}</span><h3>${item.name}</h3><strong>${money(item.price)}</strong></a></article>`).join("") + `<article class="related-card related-soon" style="--card-bg:#BFDEEB"><div><img src="assets/pouch-birthday-cake.png" alt="Birthday Cake Krums cookie brittle pouch" /></div><span>Cookie brittle</span><h3>Birthday Cake</h3><p>Coming soon</p></article>`;
   mainQuantity = 1;
   updateMainQuantity();
   setGalleryImage(0, true);
