@@ -179,7 +179,7 @@ function renderShop() {
     <article class="shop-card shop-card-soon" id="coming-soon" style="--card-bg:#BFDEEB">
       <div class="shop-card-image"><img src="assets/pouch-birthday-cake.png" alt="Birthday Cake Krums cookie brittle pouch" /></div>
       <p>Cookie brittle</p>
-      <div class="shop-card-heading"><h3>Birthday Cake</h3><strong>Coming soon</strong></div>
+      <div class="shop-card-heading"><h3>Birthday Cake</h3></div>
     </article>`;
 }
 
@@ -243,10 +243,10 @@ function renderProductPage() {
   if ($("#product-price")) $("#product-price").textContent = money(product.price);
   if ($("#detail-taste-notes")) $("#detail-taste-notes").innerHTML = product.notes.map(note => `<span>${note}</span>`).join("");
   if ($("#detail-metrics")) $("#detail-metrics").innerHTML = `<ul class="stat-badges" aria-hidden="true"><li class="stat-badge"><strong>130</strong><span>calories</span></li><li class="stat-badge"><strong>3G</strong><span>sugar</span></li><li class="stat-badge"><strong>50%</strong><span>less sugar</span></li></ul>`;
-  if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="flavor-pill-link ${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}">${item.name}</a>`).join("") + `<span class="flavor-pill-link is-soon">Birthday Cake <small>Soon</small></span>`;
+  if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="flavor-pill-link ${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}">${item.name}</a>`).join("") + `<span class="flavor-pill-link is-soon">Birthday Cake</span>`;
   if ($("#product-thumbnails")) $("#product-thumbnails").innerHTML = product.gallery.map((item, index) => `<button data-gallery-index="${index}" class="${index === 0 ? "active" : ""}" aria-label="${item.alt}" aria-pressed="${index === 0}"><img src="${item.src}" alt="" /></button>`).join("");
   if ($("#product-accordions")) $("#product-accordions").innerHTML = productInformation(product).map(item => `<details><summary>${item.title}<span>+</span></summary><div class="product-info-body"><div>${item.content}</div></div></details>`).join("");
-  if ($("#related-products")) $("#related-products").innerHTML = products.filter(item => item.id !== product.id).map(item => `<article class="related-card" data-flavor="${item.id}" style="--card-bg:${item.bg}"><a href="product.html?flavor=${item.id}"><div><img src="${item.image}" alt="${item.name} Krums cookie brittle pouch" /></div><span>${item.category}</span><h3>${item.name}</h3><strong>${money(item.price)}</strong></a></article>`).join("") + `<article class="related-card related-soon" style="--card-bg:#BFDEEB"><div><img src="assets/pouch-birthday-cake.png" alt="Birthday Cake Krums cookie brittle pouch" /></div><span>Cookie brittle</span><h3>Birthday Cake</h3><p>Coming soon</p></article>`;
+  if ($("#related-products")) $("#related-products").innerHTML = products.filter(item => item.id !== product.id).map(item => `<article class="related-card" data-flavor="${item.id}" style="--card-bg:${item.bg}"><a href="product.html?flavor=${item.id}"><div><img src="${item.image}" alt="${item.name} Krums cookie brittle pouch" /></div><span>${item.category}</span><h3>${item.name}</h3><strong>${money(item.price)}</strong></a></article>`).join("") + `<article class="related-card related-soon" style="--card-bg:#BFDEEB"><div><img src="assets/pouch-birthday-cake.png" alt="Birthday Cake Krums cookie brittle pouch" /></div><span>Cookie brittle</span><h3>Birthday Cake</h3></article>`;
   mainQuantity = 1;
   updateMainQuantity();
   setGalleryImage(0, true);
