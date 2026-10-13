@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Nunito:wght@400;600;700;800;900&family=Varela+Round&family=Young+Serif&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261013-v11" />
+  <link rel="stylesheet" href="styles.css?v=20261013-v12" />
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,34 +39,16 @@
 
   <main id="main">
     <section class="hero hero-launch" id="top">
+      <picture class="hero-backdrop">
+        <source type="image/avif" srcset="assets/hero-bg-640.avif 640w, assets/hero-bg-1100.avif 1100w, assets/hero-bg-1672.avif 1672w" sizes="100vw" />
+        <source type="image/webp" srcset="assets/hero-bg-640.webp 640w, assets/hero-bg-1100.webp 1100w, assets/hero-bg-1672.webp 1672w" sizes="100vw" />
+        <img src="assets/hero-bg-1100.jpg" srcset="assets/hero-bg-640.jpg 640w, assets/hero-bg-1100.jpg 1100w, assets/hero-bg-1672.jpg 1672w" sizes="100vw" alt="" width="1672" height="941" decoding="async" fetchpriority="high" />
+      </picture>
       <div class="hero-launch-copy">
         <h1><span>All snacks</span><span class="hero-launch-lockup">leave <span class="hero-launch-logo"><img src="assets/krums-logo.svg" alt="Krums" /></span></span></h1>
         <a class="hero-launch-cta" href="shop.html"><span>Shop All</span><b aria-hidden="true">→</b></a>
       </div>
       <div class="hero-launch-products" aria-label="Krums flavors">
-        <div class="hero-atmosphere" aria-hidden="true">
-          <div class="hero-swatch hero-swatch-yellow"></div>
-          <div class="hero-swatch hero-swatch-blue"></div>
-          <div class="hero-swatch hero-swatch-brown hero-swatch-extra"></div>
-          <div class="hero-swatch hero-swatch-red hero-swatch-extra"></div>
-          <div class="hero-swatch hero-swatch-dot hero-swatch-extra"></div>
-          <img class="hero-float hero-float-a" data-depth="0.14" src="assets/hero-cut-cc-1.png" alt="" width="155" height="171" />
-          <img class="hero-float hero-float-b" data-depth="0.2" src="assets/hero-cut-bd-1.png" alt="" width="164" height="170" />
-          <img class="hero-float hero-float-c" data-depth="0.08" src="assets/hero-cut-pb-1.png" alt="" width="183" height="160" />
-          <img class="hero-float hero-float-d hero-float-extra" data-depth="0.24" src="assets/hero-cut-cc-2.png" alt="" width="53" height="166" />
-          <img class="hero-float hero-float-e hero-float-extra" data-depth="0.16" src="assets/hero-cut-bd-2.png" alt="" width="60" height="160" />
-          <span class="hero-sprinkle hero-sprinkle-a"></span>
-          <span class="hero-sprinkle hero-sprinkle-b"></span>
-          <span class="hero-sprinkle hero-sprinkle-c"></span>
-          <span class="hero-sprinkle hero-sprinkle-d hero-float-extra"></span>
-          <span class="hero-sprinkle hero-sprinkle-e hero-float-extra"></span>
-          <span class="hero-chip hero-chip-a"></span>
-          <span class="hero-chip hero-chip-b"></span>
-          <span class="hero-chip hero-chip-c hero-float-extra"></span>
-          <span class="hero-crumb hero-crumb-a"></span>
-          <span class="hero-crumb hero-crumb-b"></span>
-          <span class="hero-crumb hero-crumb-c hero-float-extra"></span>
-        </div>
         <div class="hero-launch-pack hero-launch-pack-birthday">
           <img src="assets/pouch-birthday-cake.png" alt="Birthday Cake Krums cookie brittle pouch" />
         </div>
@@ -171,6 +153,6 @@
   <div class="scrim" id="scrim" hidden></div>
   <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Shopping bag"><header><div><p class="eyebrow"><span></span> Your stash</p><h2>Snack bag <i id="cart-title-count">(0)</i></h2></div><button id="close-cart" aria-label="Close bag">×</button></header><div class="cart-progress"><p id="shipping-copy">You’re $35 away from free shipping</p><div><span id="shipping-bar"></span></div></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><img class="cart-mascot" src="assets/mascot-head.svg" alt="" /><h3>Your bag is hungry.</h3><p>Good news: joy is only one flavor away.</p><a href="shop.html" id="empty-shop">Find your crunch</a></div><footer id="cart-footer" hidden><div><span>Subtotal</span><strong id="cart-total">$0.00</strong></div><button class="button button-primary" id="checkout-button">Checkout</button><small>Taxes and shipping calculated at checkout. Payment connection coming next.</small></footer></aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js?v=20261013-v11"></script>
+  <script src="script.js?v=20261013-v12"></script>
 </body>
 </html>

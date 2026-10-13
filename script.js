@@ -394,23 +394,6 @@ const revealObserver = new IntersectionObserver(entries => entries.forEach(entry
 }), {threshold:.13});
 $$('.reveal').forEach(element => revealObserver.observe(element));
 window.addEventListener("scroll", () => $("#site-header")?.classList.toggle("scrolled", scrollY > 30), {passive:true});
-
-const heroFloats = $$(".hero-float");
-if (heroFloats.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  let heroTick = false;
-  const moveHeroFloats = () => {
-    heroTick = false;
-    const y = Math.min(window.scrollY, 360);
-    heroFloats.forEach(el => {
-      el.style.setProperty("--py", `${(-y * Number(el.dataset.depth || 0.12)).toFixed(1)}px`);
-    });
-  };
-  window.addEventListener("scroll", () => {
-    if (heroTick) return;
-    heroTick = true;
-    requestAnimationFrame(moveHeroFloats);
-  }, {passive:true});
-}
 window.addEventListener("load", () => setTimeout(() => $("#page-loader")?.classList.add("done"), 350));
 
 if ($("#year")) $("#year").textContent = new Date().getFullYear();
