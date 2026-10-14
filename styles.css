@@ -3805,17 +3805,17 @@ body.product-page .stat-badges {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
-  margin: 18px 0 8px;
+  margin: 22px 0 20px;
   padding: 0;
   list-style: none;
 }
 body.product-page .stat-badge {
   flex: 1 1 0;
   width: auto;
-  max-width: 112px;
-  min-width: 76px;
+  max-width: 124px;
+  min-width: 84px;
   height: auto;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -3826,21 +3826,26 @@ body.product-page .stat-badge {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 14px 12px 12px;
 }
 body.product-page .stat-badge strong {
   font-family: "Nunito", sans-serif;
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 900;
-  line-height: 1;
+  line-height: 0.9;
 }
 body.product-page .stat-badge span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.15em;
   margin-top: 4px;
-  max-width: 78px;
+  max-width: 5.4em;
   font-family: "Varela Round", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.04em;
+  font-size: 14px;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  line-height: 1.15;
+  line-height: 1.05;
 }
 body.product-page .taste-notes { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
 body.product-page .taste-notes span,
@@ -3938,8 +3943,10 @@ body.product-page .related-soon p { margin: 8px 6px 12px; color: var(--brand-bri
   body.product-page .nutrition-grid,
   body.product-page .related-grid,
   body.product-page .product-info-body dl { grid-template-columns: 1fr; }
-  body.product-page .stat-badge strong { font-size: 24px; }
-  body.product-page .stat-badge span { font-size: 11px; max-width: 68px; }
+  body.product-page .stat-badges { gap: 12px; margin: 18px 0 16px; }
+  body.product-page .stat-badge { max-width: 112px; min-width: 88px; padding: 12px 10px 10px; }
+  body.product-page .stat-badge strong { font-size: 32px; }
+  body.product-page .stat-badge span { font-size: 12px; max-width: 5.2em; }
 }
 
 /* Spacing polish: same layout, even rhythm, and a contained mobile hero. */
