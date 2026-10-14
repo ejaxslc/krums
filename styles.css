@@ -4202,3 +4202,76 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
     object-position: center center;
   }
 }
+
+/* Why Krums: four facts, no comparison table. */
+.home-page .why-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1080px;
+  margin: 36px auto 0;
+}
+.home-page .why-facts article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 180px;
+  margin: 0;
+  padding: 22px 18px;
+  border-radius: 24px;
+  background: var(--brand-porcelain);
+  color: var(--brand-cookie-brown);
+  text-align: center;
+}
+.home-page .why-facts strong {
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--brand-cookie-brown);
+}
+.home-page .why-facts article:last-child strong {
+  max-width: 8ch;
+  font-size: 28px;
+  line-height: 1.05;
+}
+.home-page .why-facts span {
+  max-width: 24ch;
+  font-family: "Varela Round", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.home-page .why-flavors {
+  max-width: 40em;
+  margin: 22px auto 0;
+  color: var(--brand-cookie-brown);
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+.home-page .why-fineprint {
+  margin: 12px auto 0;
+  color: var(--brand-cookie-brown);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+@media (max-width: 900px) {
+  .home-page .why-facts { grid-template-columns: 1fr 1fr; }
+  .home-page .why-facts article:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .home-page .why-facts { gap: 10px; margin-top: 26px; }
+  .home-page .why-facts article { min-height: 132px; padding: 16px 14px; }
+  .home-page .why-facts strong { font-size: 34px; }
+  .home-page .why-facts article:last-child strong { font-size: 26px; }
+  .home-page .why-facts span { font-size: 13px; }
+  .home-page .why-flavors { margin-top: 18px; font-size: 16px; }
+}
