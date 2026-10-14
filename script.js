@@ -384,15 +384,33 @@ on("#menu-toggle", "click", () => setMenu(!$("#main-nav")?.classList.contains("o
 $$('#main-nav a').forEach(link => link.addEventListener("click", () => setMenu(false)));
 window.addEventListener("resize", () => { if (window.innerWidth > 760) setMenu(false); });
 
-const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-  if (entry.isIntersecting) {
-    entry.target.style.setProperty("--delay", `${entry.target.dataset.delay || 0}ms`);
-    entry.target.classList.add("visible");
-  } else {
-    entry.target.classList.remove("visible");
-  }
-}), {threshold:.13});
-$$('.reveal').forEach(element => revealObserver.observe(element));
+const revealElements = $$(".reveal");
+const showReveal = element => {
+  element.style.setProperty("--delay", `${element.dataset.delay || 0}ms`);
+  element.classList.add("visible");
+};
+if (!("IntersectionObserver" in window)) {
+  revealElements.forEach(showReveal);
+} else {
+  let revealFired = false;
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    revealFired = true;
+    if (entry.isIntersecting) showReveal(entry.target);
+    else entry.target.classList.remove("visible");
+  }), {threshold:.13});
+  revealElements.forEach(element => revealObserver.observe(element));
+  window.setTimeout(() => {
+    if (!revealFired) {
+      revealElements.forEach(showReveal);
+      return;
+    }
+    revealElements.forEach(element => {
+      const rect = element.getBoundingClientRect();
+      const onScreen = rect.bottom > 0 && rect.top < window.innerHeight;
+      if (onScreen && !element.classList.contains("visible")) showReveal(element);
+    });
+  }, 1200);
+}
 window.addEventListener("scroll", () => $("#site-header")?.classList.toggle("scrolled", scrollY > 30), {passive:true});
 window.addEventListener("load", () => setTimeout(() => $("#page-loader")?.classList.add("done"), 350));
 
