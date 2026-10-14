@@ -3835,17 +3835,15 @@ body.product-page .stat-badge strong {
   line-height: 0.9;
 }
 body.product-page .stat-badge span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.15em;
-  margin-top: 4px;
-  max-width: 5.4em;
+  display: block;
+  margin-top: 5px;
+  max-width: none;
+  white-space: nowrap;
   font-family: "Varela Round", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.02em;
+  font-size: 13px;
+  letter-spacing: 0;
   text-transform: uppercase;
-  line-height: 1.05;
+  line-height: 1;
 }
 body.product-page .taste-notes { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
 body.product-page .taste-notes span,
@@ -3944,9 +3942,9 @@ body.product-page .related-soon p { margin: 8px 6px 12px; color: var(--brand-bri
   body.product-page .related-grid,
   body.product-page .product-info-body dl { grid-template-columns: 1fr; }
   body.product-page .stat-badges { gap: 12px; margin: 18px 0 16px; }
-  body.product-page .stat-badge { max-width: 112px; min-width: 88px; padding: 12px 10px 10px; }
+  body.product-page .stat-badge { max-width: 112px; min-width: 88px; padding: 12px 8px 10px; }
   body.product-page .stat-badge strong { font-size: 32px; }
-  body.product-page .stat-badge span { font-size: 12px; max-width: 5.2em; }
+  body.product-page .stat-badge span { font-size: 11px; letter-spacing: -0.01em; }
 }
 
 /* Spacing polish: same layout, even rhythm, and a contained mobile hero. */

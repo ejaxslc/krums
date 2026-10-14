@@ -187,10 +187,10 @@ function productInformation(product) {
   return [
     {
       title:"Nutrition Facts",
-      content:`<div class="nutrition-grid"><div><strong>130</strong><span>Calories</span></div><div><strong>3g</strong><span>Sugar</span></div><div><strong>4g</strong><span>Net carbs</span></div><div><strong>50%</strong><span>Less sugar</span></div></div><p class="info-note">4g net carbs = 17g carbs − 1g fiber − 11g allulose.</p><p class="info-note">FDA does not consider allulose a total or added sugar for nutrition labeling.</p><p>Made without artificial flavors, artificial colors, preservatives.</p>`
+      content:`<div class="nutrition-grid"><div><strong>130</strong><span>Calories</span></div><div><strong>3g</strong><span>Sugar</span></div><div><strong>3g</strong><span>Net carbs</span></div><div><strong>50%</strong><span>Less sugar</span></div></div><p class="info-note">3g net carbs = 17g carbs − 1g fiber − 11g allulose.</p><p class="info-note">FDA does not consider allulose a total or added sugar for nutrition labeling.</p><p>Made without artificial flavors, artificial colors, preservatives.</p>`
     },
     {title:"Use Cases",content:`<p>${product.useCases}</p>`},
-    {title:"Key Benefits",content:"<ul><li>130 calories per serving</li><li>3g sugar per serving</li><li>50% less sugar</li><li>4g net carbs per serving</li><li>Made without artificial flavors, artificial colors, preservatives</li></ul>"},
+    {title:"Key Benefits",content:"<ul><li>130 calories per serving</li><li>3g sugar per serving</li><li>50% less sugar</li><li>3g net carbs per serving</li><li>Made without artificial flavors, artificial colors, preservatives</li></ul>"},
     {title:"Details",content:`<dl><div><dt>Category</dt><dd>${product.category}</dd></div><div><dt>Size</dt><dd>${product.size}</dd></div><div><dt>Texture</dt><dd>Thin and crispy</dd></div><div><dt>Flavor</dt><dd>${product.flavorDetail}</dd></div></dl>`},
     {title:"Product Overview",content:`<p>${product.overview}</p>`},
     {title:"How & When to Use",content:`<p>${product.usage}</p>`},
@@ -242,7 +242,7 @@ function renderProductPage() {
   if ($("#detail-size")) $("#detail-size").textContent = "One pouch";
   if ($("#product-price")) $("#product-price").textContent = money(product.price);
   if ($("#detail-taste-notes")) $("#detail-taste-notes").innerHTML = product.notes.map(note => `<span>${note}</span>`).join("");
-  if ($("#detail-metrics")) $("#detail-metrics").innerHTML = `<ul class="stat-badges" aria-hidden="true"><li class="stat-badge"><strong>130</strong><span>calories</span></li><li class="stat-badge"><strong>3g</strong><span>sugar</span></li><li class="stat-badge"><strong>3g</strong><span>net<br>carbs</span></li></ul>`;
+  if ($("#detail-metrics")) $("#detail-metrics").innerHTML = `<ul class="stat-badges" aria-hidden="true"><li class="stat-badge"><strong>130</strong><span>calories</span></li><li class="stat-badge"><strong>3g</strong><span>sugar</span></li><li class="stat-badge"><strong>3g</strong><span>net carbs</span></li></ul>`;
   if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="flavor-pill-link ${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}">${item.name}</a>`).join("") + `<span class="flavor-pill-link is-soon">Birthday Cake</span>`;
   if ($("#product-thumbnails")) $("#product-thumbnails").innerHTML = product.gallery.map((item, index) => `<button data-gallery-index="${index}" class="${index === 0 ? "active" : ""}" aria-label="${item.alt}" aria-pressed="${index === 0}"><img src="${item.src}" alt="" /></button>`).join("");
   if ($("#product-accordions")) $("#product-accordions").innerHTML = productInformation(product).map(item => `<details><summary>${item.title}<span>+</span></summary><div class="product-info-body"><div>${item.content}</div></div></details>`).join("");
