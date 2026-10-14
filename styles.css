@@ -4275,3 +4275,31 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
   .home-page .why-facts span { font-size: 13px; }
   .home-page .why-flavors { margin-top: 18px; font-size: 16px; }
 }
+
+.home-page .why-facts + .why-flavors + .why-fineprint + .krums-comparison,
+.home-page .krums-comparison {
+  margin-top: 36px;
+}
+.home-page .comparison-value {
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--brand-cookie-brown);
+}
+.home-page .comparison-na {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--brand-cookie-brown);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+@media (max-width: 760px) {
+  .home-page .krums-comparison { margin-top: 28px; }
+  .home-page .comparison-value { font-size: 18px; }
+  .home-page .comparison-na { width: 27px; height: 27px; font-size: 18px; }
+  .home-page .krums-comparison-table tbody th { font-size: 12px; line-height: 1.3; }
+}
