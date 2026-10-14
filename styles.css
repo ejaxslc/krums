@@ -4350,3 +4350,17 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
     max-height: 26px;
   }
 }
+
+/* #trail stays in the page for later TikTok and Instagram videos.
+   The section's own display rules would otherwise override the hidden attribute. */
+.home-page .flavor-trail.content-trail[hidden] {
+  display: none;
+}
+.home-page .flavor-trail.content-trail[hidden] + .origin-story {
+  padding-top: 64px;
+}
+@media (max-width: 760px) {
+  .home-page .flavor-trail.content-trail[hidden] + .origin-story {
+    padding-top: 40px;
+  }
+}
