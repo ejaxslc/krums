@@ -4313,15 +4313,16 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
   letter-spacing: -0.03em;
 }
 .home-page .why-section-sub {
-  margin: 14px auto 0;
+  margin: 16px auto 0;
   text-align: center;
   text-transform: uppercase;
   color: var(--brand-brick-red);
   font-family: "Nunito", sans-serif;
-  font-size: 16px;
+  font-size: clamp(32px, 3.25vw, 47px);
   font-weight: 800;
-  letter-spacing: 0.16em;
-  line-height: 1.3;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 .home-page .why-standards-inner > .krums-comparison {
   margin-top: 28px;
@@ -4334,7 +4335,11 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
 }
 @media (max-width: 760px) {
   .home-page .why.why-standards h2.why-section-title { font-size: clamp(40px, 11vw, 52px); }
-  .home-page .why-section-sub { margin-top: 10px; font-size: 13px; letter-spacing: 0.12em; }
+  .home-page .why-section-sub {
+    margin-top: 12px;
+    font-size: clamp(25px, 6.7vw, 34px);
+    letter-spacing: 0.02em;
+  }
   .home-page .why-standards-inner > .krums-comparison { margin-top: 22px; }
   .home-page .krums-comparison-table thead th:first-child { font-size: 14px; }
   .home-page .krums-comparison-table thead th:nth-child(2) { padding-left: 4px; padding-right: 4px; }
