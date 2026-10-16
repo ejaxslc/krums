@@ -4390,3 +4390,46 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
     font-size: 32px;
   }
 }
+
+/* Flavor Trail Shop All matches the hero Shop All, centered under the cards. */
+.home-page .flavor-trail .trail-shop-all.hero-launch-cta {
+  width: min(230px, 100%);
+  min-height: 62px;
+  margin: 38px auto 0;
+  padding: 0 42px;
+  border: 2px solid var(--brand-cookie-brown);
+  background: var(--brand-cookie-brown);
+  color: var(--brand-porcelain);
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+}
+.home-page .flavor-trail .trail-shop-all.hero-launch-cta b {
+  right: 21px;
+  font-size: 23px;
+}
+.home-page .flavor-trail .trail-shop-all.hero-launch-cta:hover {
+  background: var(--brand-crumb-red);
+  border-color: var(--brand-crumb-red);
+  color: var(--brand-porcelain);
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 5px rgba(247, 163, 59, 0.24), 0 17px 36px rgba(70, 28, 15, 0.22);
+}
+.home-page .flavor-trail .trail-shop-all.hero-launch-cta:hover b {
+  transform: translateX(5px);
+}
+@media (max-width: 760px) {
+  .home-page .flavor-trail .trail-shop-all.hero-launch-cta {
+    width: min(208px, 78%);
+    min-height: 50px;
+    margin: 26px auto 0;
+    font-size: 13px;
+  }
+  .home-page .flavor-trail .trail-shop-all.hero-launch-cta b {
+    right: 18px;
+    font-size: 22px;
+  }
+}
