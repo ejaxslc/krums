@@ -4666,3 +4666,84 @@ body.where-body .site-header.scrolled,
 body.contact-body .site-header.scrolled {
   background: rgba(255, 243, 220, 0.94);
 }
+
+/* The Krums difference matches the Why Krums? serif, smaller and still red. */
+.home-page .why-section-sub {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Our Story: about half the vertical padding and a tighter mascot gap. */
+.home-page .origin-story {
+  padding-top: clamp(36px, 4vw, 60px);
+  padding-bottom: clamp(36px, 4vw, 60px);
+  gap: clamp(12px, 2.4vw, 40px);
+}
+@media (max-width: 760px) {
+  .home-page .origin-story {
+    padding: 20px;
+    gap: 10px;
+  }
+  .home-page .why-section-sub {
+    font-size: clamp(22px, 6.2vw, 30px);
+  }
+}
+
+/* Pale yellow eyebrows on cream read as cookie brown. */
+.eyebrow.light,
+.home-page .review-side .eyebrow,
+.home-page .social-proof .eyebrow.light {
+  color: var(--brand-cookie-brown);
+}
+
+/* Hero pouches: Chocolate Chip stays centered and largest. The side pouches match. */
+@media (min-width: 761px) {
+  .home-page .hero-launch-products {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 1% 2%;
+  }
+  .home-page .hero-launch-pack {
+    position: relative;
+    bottom: auto;
+    left: auto !important;
+    right: auto !important;
+    height: auto;
+  }
+  .home-page .hero-launch-pack img {
+    width: 100%;
+    height: auto;
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-birthday,
+  .home-page .hero-launch-pack.hero-launch-pack-peanut {
+    z-index: 1;
+    width: 31%;
+    flex: 0 0 31%;
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-birthday {
+    margin-right: -8%;
+    transform: rotate(-8deg) translateY(4%);
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-peanut {
+    margin-left: -8%;
+    transform: rotate(8deg) translateY(4%);
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-chocolate {
+    z-index: 3;
+    width: 44%;
+    flex: 0 0 44%;
+    margin: 0;
+    transform: translateY(0);
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-birthday:hover {
+    transform: rotate(-6deg) translateY(-1%);
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-peanut:hover {
+    transform: rotate(6deg) translateY(-1%);
+  }
+  .home-page .hero-launch-pack.hero-launch-pack-chocolate:hover {
+    transform: translateY(-2%);
+  }
+}
