@@ -1,0 +1,5 @@
+# Keep the upload to the site files only. The git pack exceeds the 25 MiB asset limit.
+.git
+README.md
+wrangler.jsonc
+.assetsignore

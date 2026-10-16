@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#fff8e9" />
-  <meta name="description" content="Explore a Krums cookie dough snack flavor." id="page-description" />
+  <meta name="theme-color" content="#FFF4D6" />
+  <link rel="icon" type="image/svg+xml" href="assets/k-logo.svg" />
+  <meta name="description" content="Explore a Krums cookie brittle flavor." id="page-description" />
   <title>Krums Product</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&family=Young+Serif&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260925-46" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Nunito:wght@400;600;700;800;900&family=Varela+Round&family=Young+Serif&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20261016-header-cream" />
 </head>
 <body class="product-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,29 +21,35 @@
 
   <header class="site-header" id="site-header">
     <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false"><span></span><span></span></button>
-    <a class="brand" href="index.html" aria-label="Krums home"><img class="brand-wordmark" src="assets/krums-packaging-wordmark.png" alt="Krums" /></a>
+    <a class="brand" href="index.html" aria-label="Krums home"><img class="brand-wordmark" src="assets/krums-logo.svg?v=20261016-logo" alt="Krums" /></a>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       <div class="nav-shop">
-        <a class="nav-shop-trigger" href="shop.html" aria-current="page" aria-haspopup="true">Shop</a>
-        <div class="shop-dropdown" aria-label="Shop Krums flavors">
+        <a class="nav-shop-trigger" href="shop.html" aria-current="page" aria-haspopup="true" aria-expanded="false" aria-controls="shop-dropdown">Shop</a>
+        <div class="shop-dropdown" id="shop-dropdown" aria-label="Shop Krums flavors">
           <div class="shop-dropdown-intro"><small>Pick your crunch</small><strong>Find your flavor.</strong><a class="shop-dropdown-all" href="shop.html">Shop all <span aria-hidden="true">→</span></a></div>
-          <a class="shop-dropdown-product shop-dropdown-product--chocolate" href="product.html?flavor=chocolate-chip"><img src="assets/pouch-krums-chocolate-chip.png" alt="" /><span><small>Cookie dough chips</small><b>Chocolate Chip</b></span></a>
-          <a class="shop-dropdown-product shop-dropdown-product--birthday" href="product.html?flavor=birthday-cake"><img src="assets/pouch-krums-birthday-cake.png" alt="" /><span><small>Cookie dough chips</small><b>Birthday Cake</b></span></a>
-          <a class="shop-dropdown-product shop-dropdown-product--cinnamon" href="product.html?flavor=cinnamon-roll"><img src="assets/pouch-krums-cinnamon-roll.png" alt="" /><span><small>Cookie dough chips</small><b>Cinnamon Roll</b></span></a>
+          <div class="shop-dropdown-row">
+            <a class="shop-dropdown-product shop-dropdown-product--chocolate" href="product.html?flavor=chocolate-chip"><img src="assets/pouch-chocolate-chip.png" alt="" /><span><small>Cookie brittle</small><b>Chocolate Chip</b></span></a>
+            <a class="shop-dropdown-product shop-dropdown-product--peanut" href="product.html?flavor=peanut-butter-chocolate"><img src="assets/pouch-peanut-butter-chocolate.png" alt="" /><span><small>Cookie brittle</small><b>Peanut Butter Chocolate</b></span></a>
+            <a class="shop-dropdown-product shop-dropdown-product--birthday" href="product.html?flavor=birthday-cake"><img src="assets/pouch-birthday-cake.png" alt="" /><span><small>Cookie brittle</small><b>Birthday Cake</b></span></a>
+          </div>
         </div>
-      </div><a href="index.html#why">Why Krums?</a><a href="index.html#story">Our story</a><a href="index.html#faq">FAQ</a><a href="contact.html">Contact</a>
+      </div>
+      <a href="index.html#story">Our story</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="where-to-buy.html">Where to buy</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <button class="bag-button" id="open-cart" aria-label="Open snack bag">Bag <span id="cart-count">0</span></button>
   </header>
 
   <main id="main">
     <section class="product-detail flavor-theme" id="product-detail" data-theme="chocolate-chip">
-      <nav class="product-breadcrumb" aria-label="Breadcrumb"><a href="shop.html">Shop</a><span>/</span><span id="product-breadcrumb">Chocolate Chip</span></nav>
+      <nav class="product-breadcrumb" aria-label="Breadcrumb"><a href="shop.html">Shop</a><span aria-hidden="true">/</span><span id="product-breadcrumb">Chocolate Chip</span></nav>
       <div class="product-detail-grid">
         <div class="product-gallery" aria-label="Product images">
           <div class="product-thumbnails" id="product-thumbnails" aria-label="Choose a product image"></div>
           <div class="product-main-media" id="product-main-media">
-            <img id="product-main-image" src="assets/pouch-krums-chocolate-chip.png" alt="Chocolate Chip Krums pouch" />
+            <img id="product-main-image" src="assets/pouch-chocolate-chip.png" alt="Chocolate Chip Krums cookie brittle pouch" />
             <button class="gallery-arrow gallery-prev" data-gallery-step="-1" aria-label="Previous product image">←</button>
             <button class="gallery-arrow gallery-next" data-gallery-step="1" aria-label="Next product image">→</button>
             <span class="gallery-count" id="gallery-count">1 / 1</span>
@@ -50,11 +57,12 @@
         </div>
 
         <aside class="product-buy-panel">
-          <p class="product-kicker" id="detail-kicker">THE OG CRUNCH</p>
+          <p class="product-kicker" id="detail-kicker">Cookie brittle</p>
           <h1 id="detail-name">Chocolate Chip</h1>
-          <p class="stars">★★★★★ <span>4.9 · happy snackers</span></p>
-          <p class="product-description" id="detail-description"></p>
+          <p class="stars" aria-label="Rated 4.9 out of 5">★★★★★ <span>4.9 · happy snackers</span></p>
+          <p class="product-description" id="detail-description">Classic chocolate chip cookie flavor in a thinner, crispier brittle. Familiar taste, with enough crunch to leave a trail.</p>
           <div class="detail-metrics" id="detail-metrics"></div>
+          <p class="stat-plain">130 calories. 3g sugar. 3g net carbs.</p>
           <div class="taste-notes" id="detail-taste-notes"></div>
 
           <div class="detail-flavor-picker">
@@ -63,11 +71,12 @@
           </div>
 
           <div class="purchase-row detail-purchase-row">
-            <div><span id="detail-size">One 4 oz pouch</span><strong id="product-price">$7.99</strong></div>
+            <div><span id="detail-size">One pouch</span><strong id="product-price">$7.99</strong></div>
             <div class="quantity"><button data-main-qty="-1" aria-label="Decrease quantity">−</button><span id="main-qty">1</span><button data-main-qty="1" aria-label="Increase quantity">+</button></div>
           </div>
           <button class="button button-primary add-main" id="add-main">Add to bag</button>
           <p class="detail-shipping-note">Free shipping on snack boxes over $35.</p>
+          <p class="net-carbs"><strong>3g net carbs</strong> <span>17g carbs − 1g fiber − 11g allulose. FDA does not consider allulose a total or added sugar for nutrition labeling.</span></p>
         </aside>
       </div>
     </section>
@@ -84,11 +93,22 @@
     </section>
   </main>
 
-  <footer><div class="footer-brand"><img class="footer-wordmark" src="assets/krums-packaging-wordmark.png" alt="Krums" /><p>All snacks leave krums.™</p></div><div><h3>Explore</h3><a href="shop.html">Shop</a><a href="index.html#story">Our story</a><a href="index.html#faq">FAQ</a><a href="contact.html">Contact</a></div><div><h3>Say hello</h3><a href="mailto:hello@krumssnacks.com">Email us</a><a href="#">Instagram</a><a href="#">TikTok</a></div><p class="footer-legal">© <span id="year"></span> Krums. All snacks leave krums.<br /><span>Concept site · Claims subject to verification.</span></p></footer>
+  <footer>
+    <div class="footer-brand"><img class="footer-wordmark" src="assets/krums-logo.svg?v=20261016-logo" alt="Krums" /><p>All snacks leave krums.</p></div>
+    <div><h2>Explore</h2><a href="shop.html">Shop</a><a href="where-to-buy.html">Where to buy</a><a href="index.html#story">Our story</a><a href="index.html#faq">FAQ</a><a href="contact.html">Contact</a></div>
+    <div><h2>Say hello</h2><a href="mailto:info@eatkrums.com">info@eatkrums.com</a><a href="https://www.instagram.com/eatkrums/" target="_blank" rel="noopener noreferrer">Instagram @eatkrums</a><a href="https://www.tiktok.com/@eatkrums" target="_blank" rel="noopener noreferrer">TikTok @eatkrums</a></div>
+    <p class="footer-legal">© <span id="year"></span> Krums. All snacks leave krums.</p>
+  </footer>
 
   <div class="scrim" id="scrim" hidden></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Shopping bag"><header><div><p class="eyebrow"><span></span> Your stash</p><h2>Snack bag <i id="cart-title-count">(0)</i></h2></div><button id="close-cart" aria-label="Close bag">×</button></header><div class="cart-progress"><p id="shipping-copy">You’re $35 away from free shipping</p><div><span id="shipping-bar"></span></div></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><img class="cart-mascot" src="assets/krums-mascot-head.png" alt="" /><h3>Your bag is hungry.</h3><p>Good news: joy is only one flavor away.</p><a href="shop.html" id="empty-shop">Find your crunch</a></div><footer id="cart-footer" hidden><div><span>Subtotal</span><strong id="cart-total">$0.00</strong></div><button class="button button-primary" id="checkout-button">Checkout</button><small>Taxes and shipping calculated at checkout. Payment connection coming next.</small></footer></aside>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Shopping bag">
+    <header><div><p class="eyebrow"><span></span> Your stash</p><h2>Snack bag <i id="cart-title-count">(0)</i></h2></div><button id="close-cart" aria-label="Close bag">×</button></header>
+    <div class="cart-progress"><p id="shipping-copy">You’re $35 away from free shipping</p><div><span id="shipping-bar"></span></div></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><img class="cart-mascot" src="assets/mascot-head.svg?v=20261016" alt="" /><h3>Your bag is hungry.</h3><p>Good news: joy is only one flavor away.</p><a href="shop.html" id="empty-shop">Find your crunch</a></div>
+    <footer id="cart-footer" hidden><div><span>Subtotal</span><strong id="cart-total">$0.00</strong></div><button class="button button-primary" id="checkout-button">Checkout</button><small>Taxes and shipping calculated at checkout. Payment connection coming next.</small></footer>
+  </aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js?v=20260924-13"></script>
+  <script src="script.js?v=20261016-popup-off"></script>
 </body>
 </html>

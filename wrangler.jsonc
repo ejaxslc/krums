@@ -1,0 +1,10 @@
+{
+  // Serves the existing static site for the krums Worker. The name matches
+  // the Worker already connected in Workers Builds.
+  "name": "krums",
+  "compatibility_date": "2026-10-16",
+  "assets": {
+    "directory": "./",
+    "html_handling": "none"
+  }
+}
