@@ -28,6 +28,21 @@ const products = [
     flavorDetail:"Peanut butter and chocolate chip cookie flavor with a thin, crispy snap.",
     ingredients:"Almond flour, unsweetened peanut butter, allulose, unsweetened chocolate chips (unsweetened chocolate, cocoa butter, sunflower lecithin), butter, sunflower oil, egg, coconut flour, vanilla extract, baking soda, salt, xanthan gum, monk fruit extract.",
     allergens:"Contains peanuts, milk, eggs, almonds, and coconut. Made in a facility that also processes tree nuts, peanuts, milk, eggs, wheat, and soy."
+  },
+  {
+    id:"birthday-cake", name:"Birthday Cake", category:"Cookie brittle", size:"1 pouch", price:7.99,
+    image:"assets/pouch-birthday-cake.png", kicker:"Cookie brittle", bg:"#BFDEEB",
+    description:"Birthday cake cookie flavor in a thinner, crispier brittle. Familiar taste, with enough crunch to leave a trail.",
+    notes:["Vanilla","Cake","Crisp"],
+    gallery:[
+      {src:"assets/pouch-birthday-cake.png",alt:"Birthday Cake Krums cookie brittle pouch",fit:"contain"}
+    ],
+    overview:"Birthday Cake is cookie brittle with the flavor of a birthday cake cookie and enough crunch to leave a trail.",
+    useCases:"Keep a pouch in a desk drawer, tuck it into a bag, or open it whenever a birthday cake craving needs more crunch.",
+    usage:"Snack it straight from the pouch, or break it over yogurt, ice cream, or an afternoon coffee.",
+    flavorDetail:"Birthday cake cookie flavor with a thin, crispy snap.",
+    ingredients:"Made without artificial flavors, artificial colors, or preservatives.",
+    allergens:"Made in a facility that also processes tree nuts, peanuts, milk, eggs, wheat, and soy."
   }
 ];
 
@@ -175,12 +190,7 @@ function renderShop() {
       <p>${product.category}</p>
       <div class="shop-card-heading"><h3>${product.name}</h3><strong>${money(product.price)}</strong></div>
       <div class="shop-card-actions"><button class="shop-card-add" data-quick-add="${product.id}" aria-label="Add ${product.name} to cart">Add to cart</button></div>
-    </article>`).join("") + `
-    <article class="shop-card shop-card-soon" id="coming-soon" style="--card-bg:#BFDEEB">
-      <div class="shop-card-image"><img src="assets/pouch-birthday-cake.png" alt="Birthday Cake Krums cookie brittle pouch" /></div>
-      <p>Cookie brittle</p>
-      <div class="shop-card-heading"><h3>Birthday Cake</h3></div>
-    </article>`;
+    </article>`).join("");
 }
 
 function productInformation(product) {
@@ -243,10 +253,10 @@ function renderProductPage() {
   if ($("#product-price")) $("#product-price").textContent = money(product.price);
   if ($("#detail-taste-notes")) $("#detail-taste-notes").innerHTML = product.notes.map(note => `<span>${note}</span>`).join("");
   if ($("#detail-metrics")) $("#detail-metrics").innerHTML = `<ul class="stat-badges" aria-hidden="true"><li class="stat-badge"><strong>130</strong><span>calories</span></li><li class="stat-badge"><strong>3g</strong><span>sugar</span></li><li class="stat-badge"><strong>3g</strong><span>net carbs</span></li></ul>`;
-  if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="flavor-pill-link ${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}">${item.name}</a>`).join("") + `<span class="flavor-pill-link is-soon">Birthday Cake</span>`;
+  if ($("#detail-flavors")) $("#detail-flavors").innerHTML = products.map(item => `<a href="product.html?flavor=${item.id}" class="flavor-pill-link ${item.id === product.id ? "active" : ""}" aria-current="${item.id === product.id ? "page" : "false"}">${item.name}</a>`).join("");
   if ($("#product-thumbnails")) $("#product-thumbnails").innerHTML = product.gallery.map((item, index) => `<button data-gallery-index="${index}" class="${index === 0 ? "active" : ""}" aria-label="${item.alt}" aria-pressed="${index === 0}"><img src="${item.src}" alt="" /></button>`).join("");
   if ($("#product-accordions")) $("#product-accordions").innerHTML = productInformation(product).map(item => `<details><summary>${item.title}<span>+</span></summary><div class="product-info-body"><div>${item.content}</div></div></details>`).join("");
-  if ($("#related-products")) $("#related-products").innerHTML = products.filter(item => item.id !== product.id).map(item => `<article class="related-card" data-flavor="${item.id}" style="--card-bg:${item.bg}"><a href="product.html?flavor=${item.id}"><div><img src="${item.image}" alt="${item.name} Krums cookie brittle pouch" /></div><span>${item.category}</span><h3>${item.name}</h3><strong>${money(item.price)}</strong></a></article>`).join("") + `<article class="related-card related-soon" style="--card-bg:#BFDEEB"><div><img src="assets/pouch-birthday-cake.png" alt="Birthday Cake Krums cookie brittle pouch" /></div><span>Cookie brittle</span><h3>Birthday Cake</h3></article>`;
+  if ($("#related-products")) $("#related-products").innerHTML = products.filter(item => item.id !== product.id).map(item => `<article class="related-card" data-flavor="${item.id}" style="--card-bg:${item.bg}"><a href="product.html?flavor=${item.id}"><div><img src="${item.image}" alt="${item.name} Krums cookie brittle pouch" /></div><span>${item.category}</span><h3>${item.name}</h3><strong>${money(item.price)}</strong></a></article>`).join("");
   mainQuantity = 1;
   updateMainQuantity();
   setGalleryImage(0, true);

@@ -4564,3 +4564,41 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
     justify-self: end;
   }
 }
+
+/* Shop cards: equal height, one-line flavor names, buttons on the same baseline. */
+.shop-grid { align-items: stretch; }
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.shop-card-image {
+  flex: 0 0 270px;
+  height: 270px;
+}
+.shop-card > p {
+  margin: 14px 5px 6px;
+}
+.shop-card-heading {
+  align-items: center;
+  gap: 10px;
+  margin: 0 5px 16px;
+}
+.shop-card-heading h3 {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.shop-card-heading strong { padding-top: 0; }
+.shop-card-actions { margin-top: auto !important; }
+@media (max-width: 1000px) {
+  .shop-card-image { flex-basis: 235px; height: 235px; }
+}
+@media (max-width: 760px) {
+  .shop-card { width: min(340px, 100%); }
+  .shop-card-image { flex-basis: 230px; height: 230px; }
+  .shop-card-heading h3 { font-size: 17px; }
+}
