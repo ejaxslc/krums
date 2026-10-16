@@ -2694,7 +2694,7 @@ body{background:var(--brand-warm-cream);color:var(--brand-espresso)}
 .hero-launch-pack img{filter:drop-shadow(0 28px 26px rgba(53,31,24,.28))}
 
 .home-page .why.why-standards{
-  background:linear-gradient(145deg,var(--brand-pale-mist),var(--brand-powder-blue));
+  background:var(--brand-warm-cream);
   color:var(--brand-espresso);
   border-top-color:rgba(53,31,24,.12);
 }
@@ -3579,6 +3579,7 @@ body .site-header .shop-dropdown-product--soon { cursor: default; }
 }
 .home-page .krums-comparison-table-wrap {
   overflow: auto;
+  border: 2px solid var(--brand-espresso);
   border-radius: 28px;
   background: var(--brand-porcelain);
 }
@@ -4372,5 +4373,20 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
     max-width: 100%;
     height: auto;
     max-height: 26px;
+  }
+}
+
+.home-page .comparison-no {
+  width: 42px;
+  height: 42px;
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+@media (max-width: 760px) {
+  .home-page .comparison-no {
+    width: 34px;
+    height: 34px;
+    font-size: 32px;
   }
 }

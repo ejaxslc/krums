@@ -3,7 +3,7 @@
   <defs>
     <style>
       .st0 {
-        fill: #fff;
+        fill: #FFF4D6;
       }
 
       .st1 {
@@ -15,15 +15,15 @@
       }
 
       .st3 {
-        fill: #fbf8f6;
+        fill: #FFF4D6;
       }
 
       .st4 {
-        fill: #fdfcfb;
+        fill: #FFF4D6;
       }
 
       .st5 {
-        fill: #f1e9e2;
+        fill: #FFF4D6;
       }
 
       .st6 {
@@ -35,7 +35,7 @@
       }
 
       .st8 {
-        fill: #fefefe;
+        fill: #FFF4D6;
       }
     </style>
   </defs>

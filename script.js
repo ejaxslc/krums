@@ -93,7 +93,7 @@ function mountEmailPopup() {
         <button class="email-popup-close" type="button" data-close-email-popup aria-label="Close email signup">×</button>
         <div class="email-popup-art" aria-hidden="true">
           <img class="email-popup-logo" src="assets/krums-logo.svg" alt="" />
-          <img class="email-popup-mascot" src="assets/mascot-head.svg" alt="" />
+          <img class="email-popup-mascot" src="assets/mascot-head.svg?v=20261016" alt="" />
           <span>10%<small>off</small></span>
         </div>
         <div class="email-popup-content">
