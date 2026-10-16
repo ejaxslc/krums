@@ -4541,3 +4541,26 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
   body .site-header .shop-dropdown-product > span { align-items: center; text-align: center; }
   body .site-header .shop-dropdown-product b { font-size: 14px !important; }
 }
+
+/* Desktop header: logo left, nav centered on the page, bag right. */
+@media (min-width: 981px) {
+  body .site-header {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    align-items: center;
+    column-gap: 24px;
+  }
+  body .site-header .brand {
+    grid-column: 1;
+    justify-self: start;
+  }
+  body .site-header .main-nav {
+    grid-column: 2;
+    justify-self: center;
+    margin-left: 0;
+  }
+  body .site-header .bag-button {
+    grid-column: 3;
+    justify-self: end;
+  }
+}
