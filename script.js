@@ -495,5 +495,7 @@ renderProductPage();
 renderCart();
 updateMainQuantity();
 if ($("#announcement-copy")) setInterval(() => changeAnnouncement(1), 6000);
-if (!sessionStorage.getItem("krums-email-popup-seen")) window.setTimeout(() => openEmailPopup({automatic:true}), 950);
+// Email-list popup on first visit. Set to true to turn the automatic popup back on.
+const EMAIL_POPUP_AUTO_OPEN = false;
+if (EMAIL_POPUP_AUTO_OPEN && !sessionStorage.getItem("krums-email-popup-seen")) window.setTimeout(() => openEmailPopup({automatic:true}), 950);
 if ($$(".review").length > 1) setInterval(() => updateReview(1), 7500);
