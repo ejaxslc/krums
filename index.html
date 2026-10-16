@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Nunito:wght@400;600;700;800;900&family=Varela+Round&family=Young+Serif&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261014-v28" />
+  <link rel="stylesheet" href="styles.css?v=20261016-nav" />
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,12 +25,14 @@
     <a class="brand" href="#top" aria-label="Krums home"><img class="brand-wordmark" src="assets/krums-logo.svg?v=20261016-logo" alt="Krums" /></a>
     <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       <div class="nav-shop">
-        <a class="nav-shop-trigger" href="shop.html" aria-haspopup="true">Shop</a>
-        <div class="shop-dropdown" aria-label="Shop Krums flavors">
+        <a class="nav-shop-trigger" href="shop.html" aria-haspopup="true" aria-expanded="false" aria-controls="shop-dropdown">Shop</a>
+        <div class="shop-dropdown" id="shop-dropdown" aria-label="Shop Krums flavors">
           <div class="shop-dropdown-intro"><small>Pick your crunch</small><strong>Find your flavor.</strong><a class="shop-dropdown-all" href="shop.html">Shop all <span aria-hidden="true">→</span></a></div>
-          <a class="shop-dropdown-product shop-dropdown-product--chocolate" href="product.html?flavor=chocolate-chip"><img src="assets/pouch-chocolate-chip.png" alt="" /><span><small>Cookie brittle</small><b>Chocolate Chip</b></span></a>
-          <a class="shop-dropdown-product shop-dropdown-product--peanut" href="product.html?flavor=peanut-butter-chocolate"><img src="assets/pouch-peanut-butter-chocolate.png" alt="" /><span><small>Cookie brittle</small><b>Peanut Butter Chocolate</b></span></a>
-          <div class="shop-dropdown-product shop-dropdown-product--soon"><img src="assets/pouch-birthday-cake.png" alt="" /><span><small>Cookie brittle</small><b>Birthday Cake</b></span></div>
+          <div class="shop-dropdown-row">
+            <a class="shop-dropdown-product shop-dropdown-product--chocolate" href="product.html?flavor=chocolate-chip"><img src="assets/pouch-chocolate-chip.png" alt="" /><span><small>Cookie brittle</small><b>Chocolate Chip</b></span></a>
+            <a class="shop-dropdown-product shop-dropdown-product--peanut" href="product.html?flavor=peanut-butter-chocolate"><img src="assets/pouch-peanut-butter-chocolate.png" alt="" /><span><small>Cookie brittle</small><b>Peanut Butter Chocolate</b></span></a>
+            <div class="shop-dropdown-product shop-dropdown-product--soon"><img src="assets/pouch-birthday-cake.png" alt="" /><span><small>Cookie brittle</small><b>Birthday Cake</b></span></div>
+          </div>
         </div>
       </div><a href="#why">Why Krums?</a><a href="#story">Our story</a><a href="#faq">FAQ</a><a href="where-to-buy.html">Where to buy</a><a href="contact.html">Contact</a>
     </nav>
@@ -179,6 +181,6 @@
   <div class="scrim" id="scrim" hidden></div>
   <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Shopping bag"><header><div><p class="eyebrow"><span></span> Your stash</p><h2>Snack bag <i id="cart-title-count">(0)</i></h2></div><button id="close-cart" aria-label="Close bag">×</button></header><div class="cart-progress"><p id="shipping-copy">You’re $35 away from free shipping</p><div><span id="shipping-bar"></span></div></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><img class="cart-mascot" src="assets/mascot-head.svg?v=20261016" alt="" /><h3>Your bag is hungry.</h3><p>Good news: joy is only one flavor away.</p><a href="shop.html" id="empty-shop">Find your crunch</a></div><footer id="cart-footer" hidden><div><span>Subtotal</span><strong id="cart-total">$0.00</strong></div><button class="button button-primary" id="checkout-button">Checkout</button><small>Taxes and shipping calculated at checkout. Payment connection coming next.</small></footer></aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js?v=20261014-v21"></script>
+  <script src="script.js?v=20261016-nav"></script>
 </body>
 </html>

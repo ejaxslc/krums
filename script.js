@@ -374,6 +374,69 @@ on("#contact-form", "submit", event => {
 });
 document.addEventListener("keydown", event => { if (event.key === "Escape") { closeLayers(); closeEmailPopup(); } });
 
+const shopMenu = document.querySelector(".nav-shop");
+const shopTrigger = shopMenu?.querySelector(".nav-shop-trigger");
+if (shopMenu && shopTrigger) {
+  let shopOpenTimer = 0;
+  let shopCloseTimer = 0;
+  const desktopShop = () => window.matchMedia("(min-width: 981px)").matches;
+  const placeShopDropdown = () => {
+    const dropdown = shopMenu.querySelector(".shop-dropdown");
+    if (!dropdown || !desktopShop()) {
+      shopMenu.style.removeProperty("--shop-dropdown-left");
+      if (dropdown) dropdown.style.left = "";
+      return;
+    }
+    dropdown.style.left = "0px";
+    const overflow = Math.ceil(dropdown.getBoundingClientRect().right - (window.innerWidth - 20));
+    const left = overflow > 0 ? -overflow : 0;
+    dropdown.style.left = `${left}px`;
+    shopMenu.style.setProperty("--shop-dropdown-left", `${left}px`);
+  };
+  const setShopOpen = open => {
+    if (open) placeShopDropdown();
+    shopMenu.classList.toggle("is-open", open);
+    shopTrigger.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+  const scheduleShopOpen = () => {
+    if (!desktopShop()) return;
+    window.clearTimeout(shopCloseTimer);
+    window.clearTimeout(shopOpenTimer);
+    shopOpenTimer = window.setTimeout(() => setShopOpen(true), 140);
+  };
+  const scheduleShopClose = () => {
+    if (!desktopShop()) return;
+    window.clearTimeout(shopOpenTimer);
+    window.clearTimeout(shopCloseTimer);
+    shopCloseTimer = window.setTimeout(() => {
+      if (!shopMenu.matches(":focus-within")) setShopOpen(false);
+    }, 220);
+  };
+  shopMenu.addEventListener("mouseenter", scheduleShopOpen);
+  shopMenu.addEventListener("mouseleave", scheduleShopClose);
+  shopTrigger.addEventListener("focus", () => { if (desktopShop()) setShopOpen(true); });
+  shopMenu.addEventListener("focusout", event => {
+    if (!shopMenu.contains(event.relatedTarget)) scheduleShopClose();
+  });
+  shopTrigger.addEventListener("click", event => {
+    if (!desktopShop()) return;
+    const hoverFine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (!hoverFine && !shopMenu.classList.contains("is-open")) {
+      event.preventDefault();
+      window.clearTimeout(shopOpenTimer);
+      setShopOpen(true);
+    }
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key !== "Escape" || !shopMenu.classList.contains("is-open")) return;
+    setShopOpen(false);
+    shopTrigger.focus();
+  });
+  window.addEventListener("resize", () => {
+    if (shopMenu.classList.contains("is-open")) placeShopDropdown();
+  });
+}
+
 const setMenu = open => {
   const toggle = $("#menu-toggle");
   $("#main-nav")?.classList.toggle("open", open);
