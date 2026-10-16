@@ -4652,3 +4652,17 @@ body.product-page .add-main {
   border-color: var(--brand-cookie-brown);
   color: var(--brand-porcelain);
 }
+
+/* Every page uses the home header cream, including after scroll. */
+body.home-page .site-header,
+body.shop-page .site-header,
+body.product-page .site-header,
+body.where-body .site-header,
+body.contact-body .site-header,
+body.home-page .site-header.scrolled,
+body.shop-page .site-header.scrolled,
+body.product-page .site-header.scrolled,
+body.where-body .site-header.scrolled,
+body.contact-body .site-header.scrolled {
+  background: rgba(255, 243, 220, 0.94);
+}
