@@ -4602,3 +4602,53 @@ body.product-page .product-information > h2 { line-height: 1.05; text-align: lef
   .shop-card-image { flex-basis: 230px; height: 230px; }
   .shop-card-heading h3 { font-size: 17px; }
 }
+
+/* Product pages: one cream background for every flavor. */
+body.product-page .product-detail[data-theme] {
+  --detail-bg: var(--brand-warm-cream);
+  --theme-bg: var(--brand-warm-cream);
+  --accent: var(--brand-crumb-red);
+  --accent-soft: var(--brand-terracotta);
+  background: var(--brand-warm-cream);
+  color: var(--brand-cookie-brown);
+}
+body.product-page .product-main-media,
+body.product-page .product-thumbnails button,
+body.product-page .product-thumbnails img,
+body.product-page .related-grid article > a > div {
+  background: var(--brand-warm-cream);
+}
+body.product-page .product-detail .product-kicker,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .product-kicker,
+body.product-page .product-detail[data-theme="birthday-cake"] .product-kicker {
+  color: var(--brand-crumb-red);
+}
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .stars,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .product-description,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .stat-plain,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .detail-shipping-note,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .net-carbs,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .detail-flavor-picker > p,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] h1,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .purchase-row,
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .product-breadcrumb {
+  color: var(--brand-cookie-brown);
+}
+body.product-page .product-detail[data-theme="peanut-butter-chocolate"] .taste-notes span,
+body.product-page .taste-notes span {
+  background: var(--brand-butter-yellow);
+  color: var(--brand-cookie-brown);
+}
+body.product-page .flavor-pill-link {
+  color: var(--brand-cookie-brown);
+}
+body.product-page .flavor-pill-link.active {
+  background: var(--brand-crumb-red);
+  border-color: var(--brand-crumb-red);
+  color: var(--brand-porcelain);
+}
+body.product-page .add-main {
+  background: var(--brand-cookie-brown);
+  border-color: var(--brand-cookie-brown);
+  color: var(--brand-porcelain);
+}
